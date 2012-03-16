@@ -1,0 +1,13 @@
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\PlayerInfo.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\PlayerInfo.pdb
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\Community.CsharpSqlite.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\Community.CsharpSqlite.SQLiteClient.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\TerrariaServer.exe
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\TShockAPI.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\Newtonsoft.Json.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\Mono.Data.Sqlite.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\TShockAPI.pdb
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Release\TShockAPI.xml
+C:\csProjects\PlayerInfo\PlayerInfo\obj\Release\ResolveAssemblyReference.cache
+C:\csProjects\PlayerInfo\PlayerInfo\obj\Release\PlayerInfo.dll
+C:\csProjects\PlayerInfo\PlayerInfo\obj\Release\PlayerInfo.pdb

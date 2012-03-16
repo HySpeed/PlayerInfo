@@ -1,0 +1,15 @@
+C:\csProjects\PlayerInfo\PlayerInfo\obj\Debug\ResolveAssemblyReference.cache
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\PlayerInfo.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\PlayerInfo.pdb
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\Community.CsharpSqlite.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\Community.CsharpSqlite.SQLiteClient.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\TerrariaServer.exe
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\TShockAPI.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\Newtonsoft.Json.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\Mono.Data.Sqlite.dll
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\TShockAPI.pdb
+C:\csProjects\PlayerInfo\PlayerInfo\bin\Debug\TShockAPI.xml
+C:\csProjects\PlayerInfo\PlayerInfo\obj\Debug\PlayerInfo.dll
+C:\csProjects\PlayerInfo\PlayerInfo\obj\Debug\PlayerInfo.pdb
+C:\terraria\TShock.DEV\ServerPlugins\PlayerInfo.dll
+C:\terraria\TShock.DEV\ServerPlugins\PlayerInfo.pdb
