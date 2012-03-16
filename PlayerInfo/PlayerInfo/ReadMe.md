@@ -37,8 +37,10 @@ _playerinfo_ - Permission to view info on players
 
 ### Version History:
 
+1.0.1.0: Initial Release
+* Display Life, Mana on join
+
 1.0.0.0: Initial Release
-- Info: Life, Buffs
-- Inv : InvRow, Acc, Arm, Amm
-- Display Life, Mana, and first item on join
+* Info: Life, Buffs
+* Inv : InvRow, Acc, Arm, Amm
 

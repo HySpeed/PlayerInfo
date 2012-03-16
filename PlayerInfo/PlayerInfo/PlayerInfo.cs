@@ -18,6 +18,7 @@ namespace PlayerInfo
     // Initialize ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     public override void Initialize()
     {
+      ServerHooks.Join  += OnJoin;
       Commands.Init();
     } // Initialize ------------------------------------------------------------
 
@@ -27,6 +28,7 @@ namespace PlayerInfo
     {
       if ( disposing )
       {
+        ServerHooks.Join -= OnJoin;
         base.Dispose( disposing );
       } // if
     } // Dispose ---------------------------------------------------------------
@@ -34,10 +36,21 @@ namespace PlayerInfo
 
 
     #region Plugin Hooks 
+    // OnJoin ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    void OnJoin( int player, 
+                 System.ComponentModel.HandledEventArgs eventArgs )
+    {
+      if ( !eventArgs.Handled ) 
+      {
+        // string.Format causes this to hang
+        TShock.Utils.Broadcast( "Joining: " + Main.player[player].name + 
+                                "(" + Main.player[player].statLifeMax.ToString() + 
+                                "/" + Main.player[player].statManaMax.ToString() + ")", Color.Azure );
+      } // if
 
-    // OnJoin
-    // TODO 
-    // TShock.Utils.Broadcast( );
+    } // OnJoin ----------------------------------------------------------------
+
+    
     // OnError +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     public static void OnError( object         sender, 
                                 ErrorEventArgs error )
@@ -72,7 +85,7 @@ namespace PlayerInfo
     // Version +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
    public override Version Version
     {
-      get { return new Version( 1, 0, 0, 0 ); }
+      get { return new Version( 1, 0, 1, 0 ); }
     } // Versin ----------------------------------------------------------------
 
     
