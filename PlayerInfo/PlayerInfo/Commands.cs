@@ -83,11 +83,15 @@ namespace PlayerInfo
       String itemName, type;
       int    firstSlot, lastSlot;
 
-      if ( acc )  { type = "Access"; firstSlot = 3; lastSlot  = 8; } // if
+      if ( acc )  { type = "Access"; firstSlot = 3; lastSlot  = 7; } // if
       else        { type = "Armour"; firstSlot = 0; lastSlot  = 2; } // else
+
+//      args.Player.SendMessage( string.Format( "~ type: {0}", type ), Color.Pink );
+//      args.Player.SendMessage( string.Format( "~ name: {0}", player.Name ), Color.Pink );
 
       for ( int index = firstSlot; index <= lastSlot; index++ ) {
         itemName = player.TPlayer.armor[index].name;
+//        args.Player.SendMessage( string.Format( "~ {0}: [{1}]", type, itemName ), Color.Pink );
         if ( itemName.Length == 0 ) { itemName = "(no item)"; } // if
         response.Append( itemName );
         if ( index < lastSlot ) { response.Append( " | " ); } // if
@@ -99,7 +103,7 @@ namespace PlayerInfo
     
     // showAmm +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     private static void showAmm( CommandArgs        args,
-                                  TShockAPI.TSPlayer player )
+                                 TShockAPI.TSPlayer player )
     {
       StringBuilder response = new StringBuilder();
       String itemName;
@@ -203,11 +207,12 @@ namespace PlayerInfo
 
 
     // showLifeMana ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    private static void showLifeMana( CommandArgs args,
+    private static void showLifeMana( CommandArgs        args,
                                       TShockAPI.TSPlayer player )
     {
-      args.Player.SendMessage( string.Format( "{0}: Life / Mana: ({1}/{2})",
+      args.Player.SendMessage( string.Format( "{0}[{1}]: Life / Mana: ({2}/{3})",
                                                 player.Name,
+                                                player.IP,
                                                 player.FirstMaxHP,
                                                 player.FirstMaxMP ), Color.White );
 
@@ -224,7 +229,9 @@ namespace PlayerInfo
       int buffType;
       int buffCount = player.TPlayer.countBuffs();
 
-      for ( int index = 0; index <= buffCount; index++ ) {
+      //if ( buffCount > 9 ) buffCount = 9;
+
+      for ( int index = 0; index < buffCount; index++ ) {
         buffType = player.TPlayer.buffType[index];
         if ( buffType > 0 ) { 
           buffName = TShock.Utils.GetBuffName( buffType );

@@ -55,12 +55,18 @@ _playerinfo_ - Permission to view info on players
 
 ### Version History:
 
-1.0.1.0: Initial Release
+1.0.1.3: Update
+* New:
+* * IP displayed with Life command
 
+* Fixed issues:
+* * Social Slot #1 displayed on Acc list
+* * Buffs of more than 10 caused display error
+
+1.0.1.0: Update
 * Display Life, Mana on join
 
 1.0.0.0: Initial Release
-
 * Info: Life, Buffs
 * Inv : InvRow, Acc, Arm, Amm
 
