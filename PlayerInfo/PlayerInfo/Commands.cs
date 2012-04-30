@@ -57,10 +57,10 @@ namespace PlayerInfo
         {
           action = args.Parameters[1].ToUpper();
           
-               if ( action.Equals( "ACC" ) ) { showAccArm( args, player, true  ); } // if
-          else if ( action.Equals( "ARM" ) ) { showAccArm( args, player, false ); } // if
-          else if ( action.Equals( "AMM" ) ) { showAmm( args, player ); } // if
-          else if ( action.Equals( "INV" ) ) { showInv( args, player ); } // if
+               if ( action.StartsWith( "AC" ) ) { showAccArm( args, player, true  ); } // if
+          else if ( action.StartsWith( "AR" ) ) { showAccArm( args, player, false ); } // if
+          else if ( action.StartsWith( "AM" ) ) { showAmm( args, player ); } // if
+          else if ( action.StartsWith( "IN" ) ) { showInv( args, player ); } // if
           else 
           {
             args.Player.SendMessage( string.Format( "Invalid action: {0}", action ), Color.Red );
@@ -194,11 +194,11 @@ namespace PlayerInfo
         {
           action = args.Parameters[1].ToUpper();
           
-               if ( action.Equals( "LIFE"  ) ) { showLifeMana( args, player ); } // if
-          else if ( action.Equals( "BUFFS" ) ) { showBuffs( args, player ); } // if
+               if ( action.StartsWith( "L" ) ) { showLifeMana( args, player ); } // if
+          else if ( action.StartsWith( "B" ) ) { showBuffs(    args, player ); } // if
           else 
           {
-            args.Player.SendMessage( string.Format( "Invalid action: {0}", action ), Color.Red );
+            args.Player.SendMessage( string.Format( "Invalid action: {0}. Proper Syntax: /pinfo <player> [ Life | Buffs ]", action ), Color.Red );
           } // else
 
         } // if
@@ -210,11 +210,13 @@ namespace PlayerInfo
     private static void showLifeMana( CommandArgs        args,
                                       TShockAPI.TSPlayer player )
     {
-      args.Player.SendMessage( string.Format( "{0}[{1}]: Life / Mana: ({2}/{3})",
+      args.Player.SendMessage( string.Format( "{0} [Ip:{1}] [Life/Mana: {2}/{3}] [Account: {4}] [Group: {5}]",
                                                 player.Name,
                                                 player.IP,
                                                 player.FirstMaxHP,
-                                                player.FirstMaxMP ), Color.White );
+                                                player.FirstMaxMP,
+                                                player.UserAccountName,
+                                                player.Group.Name ), Color.White );
 
     } // showLifeMana ----------------------------------------------------------
 

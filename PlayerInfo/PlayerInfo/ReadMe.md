@@ -7,7 +7,7 @@ Provide Info on a player
 
 _/pinfo_ _playerName_ Life - Shows Life and Mana of specified player
 
-. . . . . . . . . . . . . . . . . . . . . :"{name} Life / Mana: ({life}/{mana})"
+. . . . . . . . . . . . . . . . . . . . . :"{name} [Ip:{ipAddy}] [Life/Mana: {life}/{mana}] [Account: {loggedin}] [Group: {group}]"
 
 
 _/pinfo_ _playerName_ Buffs - Shows the buffs of the specified player
@@ -54,6 +54,10 @@ _playerinfo_ - Permission to view info on players
 
 
 ### Version History:
+
+1.0.2.0
+* Added Logged In As (Account) to pinfo
+* Added Group to iinfo
 
 1.0.1.3: Update
 * New:
